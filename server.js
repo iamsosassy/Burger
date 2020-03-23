@@ -8,7 +8,7 @@ app.set('view engine', 'handlebars');
 app.get('/', function(req, res) {
     // go to the DB first and get all the burgers
 
-    //var allBurgers = []
+    var allBurgers = []
     res.render('home')
 })
 

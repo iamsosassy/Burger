@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var burger = require('../models/burger.js');
+var burger = require('../model/burger.js');
 
 
 //Setup Routes
@@ -21,6 +21,7 @@ router.get('/index', function(req, res) {
 
 // Create a New Burger
 router.post('/burger/create', function(req, res) {
+    console.log('We are in the controler route /burger/create!!')
     burger.insertOne(req.body.burger_name, function() {
         res.redirect('/index');
     });

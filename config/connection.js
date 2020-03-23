@@ -1,7 +1,7 @@
 // node connection to mysql
 
-const mysql = require(mysql);
-const connection;
+const mysql = require('mysql');
+let connection;
 
 if (process.env.JAWSDB_URL) {
     // If the server contains the JAWSDB_URL environmental variable, it connects to the JawsDB database.
@@ -12,7 +12,7 @@ if (process.env.JAWSDB_URL) {
         port: 3306,
         host: "localhost",
         user: "root",
-        password: "",
+        password: "K?!?345bv",
         database: "burgers_db"
     });
 };

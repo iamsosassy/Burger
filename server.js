@@ -7,6 +7,8 @@ app.set('view engine', 'handlebars');
 
 var bodyParser = require('body-parser')
 
+app.use(express.static(__dirname + '/public'));
+
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
     extended: true
@@ -26,11 +28,12 @@ app.get('/save', function(req, res) {
     // go save new thing to DB
 })
 
-// app.post('/burger/create', function(req, res) {
-//     console.log(req.body);
-//     // Save to DB now !!!!
 
-// })
+app.post('/burger/create', function(req, res) {
+    console.log(req.body);
+    //     // Save to DB now !!!!
+
+})
 
 var routes = require('./controller/burgers_controller.js')
 app.use(routes);

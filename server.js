@@ -29,11 +29,6 @@ app.get('/save', function(req, res) {
 })
 
 
-// app.post('/burger/create', function(req, res) {
-// console.log(req.body);
-//     // Save to DB now !!!!
-
-// })
 
 var routes = require('./controller/burgers_controller.js')
 app.use(routes);
